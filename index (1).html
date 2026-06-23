@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rashika — WordPress Developer</title>
+<meta name="description" content="WordPress developer building fast, clean sites for small businesses, stores, and creators.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <span class="logo">Rashika<span class="logo-dot">.</span></span>
+    <nav class="nav-links">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero wrap">
+    <p class="eyebrow load-in" style="--delay: 0s">WordPress developer</p>
+    <h1 class="load-in" style="--delay: 0.1s">I build WordPress sites<br>that load fast and<br>actually convert.</h1>
+    <p class="hero-sub load-in" style="--delay: 0.25s">Three sample builds below — a dental practice, a coffee store, and a coaching site. Each one live, each one built the way I'd build yours.</p>
+    <div class="hero-actions load-in" style="--delay: 0.4s">
+      <a href="#work" class="btn btn-primary">See the work</a>
+      <a href="#contact" class="btn btn-ghost">Get in touch</a>
+    </div>
+  </section>
+
+  <section id="work" class="work wrap">
+
+    <p class="section-label">01 — Selected work</p>
+
+    <article class="project reveal">
+      <div class="project-media">
+        <div class="browser-frame">
+          <div class="browser-bar"><span></span><span></span><span></span></div>
+          <div class="browser-screen placeholder-dental">
+            <span class="placeholder-text">Brightline Family Dental — screenshot</span>
+          </div>
+        </div>
+      </div>
+      <div class="project-info">
+        <p class="project-tag">Local service business</p>
+        <h2>Brightline Family Dental</h2>
+        <p class="project-desc">A four-page site for a family dental practice: clear service breakdown, click-to-call in the header, embedded map, and a booking form built for patients on their phones in a hurry.</p>
+        <ul class="project-meta">
+          <li>WordPress + Elementor</li>
+          <li>Mobile-first, click-to-call</li>
+          <li>4 pages</li>
+        </ul>
+        <a href="#" class="project-link">View live site →</a>
+      </div>
+    </article>
+
+    <article class="project project-reverse reveal">
+      <div class="project-media">
+        <div class="browser-frame">
+          <div class="browser-bar"><span></span><span></span><span></span></div>
+          <div class="browser-screen placeholder-coffee">
+            <span class="placeholder-text">Northbound Coffee Co. — screenshot</span>
+          </div>
+        </div>
+      </div>
+      <div class="project-info">
+        <p class="project-tag">WooCommerce store</p>
+        <h2>Northbound Coffee Co.</h2>
+        <p class="project-desc">An eight-product coffee store with working cart and checkout, sale badges, and product pages written to actually sell — not placeholder text dressed up as copy.</p>
+        <ul class="project-meta">
+          <li>WordPress + WooCommerce</li>
+          <li>8 products, full cart flow</li>
+          <li>5 pages</li>
+        </ul>
+        <a href="#" class="project-link">View live site →</a>
+      </div>
+    </article>
+
+    <article class="project reveal">
+      <div class="project-media">
+        <div class="browser-frame">
+          <div class="browser-bar"><span></span><span></span><span></span></div>
+          <div class="browser-screen placeholder-coach">
+            <span class="placeholder-text">Clearhead Coaching — screenshot</span>
+          </div>
+        </div>
+      </div>
+      <div class="project-info">
+        <p class="project-tag">Coaching &amp; content site</p>
+        <h2>Clearhead Coaching</h2>
+        <p class="project-desc">A custom-styled site for a freelance productivity coach, built to move away from the default theme look — custom hero layout, a distinct blog template, and a booking flow for fit calls.</p>
+        <ul class="project-meta">
+          <li>WordPress + custom blocks</li>
+          <li>Blog + booking form</li>
+          <li>4 pages</li>
+        </ul>
+        <a href="#" class="project-link">View live site →</a>
+      </div>
+    </article>
+
+  </section>
+
+  <section id="about" class="about wrap">
+    <p class="section-label">02 — About</p>
+    <div class="about-grid reveal">
+      <h2>I build the kind of site I'd want to be a customer on.</h2>
+      <div class="about-text">
+        <p>I'm a WordPress developer focused on small business and creator sites — the kind that need to load fast, work on a phone, and actually move someone from "just looking" to "filled out the form."</p>
+        <p>I work with Elementor, Gutenberg, and WooCommerce, and I write real copy for every project instead of shipping lorem ipsum and calling it done. If you've got a business that needs a site, I'd like to build it.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact wrap">
+    <p class="section-label">03 — Contact</p>
+    <h2 class="reveal">Have a project in mind?</h2>
+    <p class="contact-sub reveal">Tell me what you need built, and I'll get back to you within a day.</p>
+    <a href="mailto:hello@example.com" class="btn btn-primary btn-large reveal">hello@example.com</a>
+  </section>
+
+</main>
+
+<footer class="site-footer wrap">
+  <p>© 2026 Rashika. Built with WordPress, deployed with care.</p>
+</footer>
+
+<script>
+  // Header shrinks slightly on scroll
+  const header = document.querySelector('.site-header');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('is-scrolled', window.scrollY > 24);
+  });
+
+  // Scroll-triggered reveal for sections below the fold
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  revealEls.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
